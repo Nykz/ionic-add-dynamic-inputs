@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Add Dynamic Inputs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="ion-margin" *ngIf="items?.length > 0">
+    <ion-item 
+      color="light" 
+      lines="none"
+      *ngFor="let item of items; let i = index">
+      <span slot="start">&#9679;</span>
+      <ion-input 
+        placeholder="Add more items" 
+        [(ngModel)]="items[i].name"
+        (ionChange)="changeInInput($event, i)"
+        (click)="checkEmptyInput()">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

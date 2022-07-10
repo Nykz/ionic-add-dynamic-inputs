@@ -1,0 +1,7 @@
+{
+  "name": "dynamic-inputs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
